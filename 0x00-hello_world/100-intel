@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S 0-main=intel syntax $CFILE
+gcc -S -main=intel $CFILE
