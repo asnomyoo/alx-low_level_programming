@@ -3,21 +3,19 @@
 /**
  * rev_string - reverses a string
  * @s: string parametre input
- * Return: nothing
+ * Return: void
  */
 
 void rev_string(char *s)
 {
 int l, i;
-char temp;
-/*find string longth without null char*/
-for (l = 0 ; s[l] != '\0' ; ++l)
-	;
-/*swap the string by lopping to half the string*/
-for (i = 0 ; i < 1 / 2 ; i++)
+for (i = 0 ; s[i] != '\0' ; i++)
+l++;
+for (i = 0 ; i < l / 2 ; i++)
 {
+char temp;
 temp = s[i];
-s[i] = s[l - 1 - i]; /* 1 because the array starts from 0*/
+s[i] = s[l - 1 - i];
 s[l - 1 - i] = temp;
 }
 }
