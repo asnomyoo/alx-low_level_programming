@@ -21,9 +21,9 @@ return (square(n, 1));
 
 int square(int n, int i)
 {
-if (i *i == n)
+if (i * i == n)
 return (i);
-else if (i *i < n)
+else if (i * i < n)
 return (square(n, i + 1));
 else
 return (-1);
