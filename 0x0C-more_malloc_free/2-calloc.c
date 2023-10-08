@@ -1,19 +1,22 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
 * *_memset - fills memory with a constant byte
-*@s: pointer to put the constant
-*@b: constant
-*@n: max bytes to use
+*@s: memory erea to be filled
+*@b: char to copy
+*@n: number of times to copu b
 * Return: s
 */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-char *ptr = s;
-while (n--)
-*s++ = b;
-return (ptr);
+unsigned int i;
+for (i = 0 ; i < n ; i++)
+{
+s[i] = b;
+}
+return (s);
 }
 
 /**
@@ -30,6 +33,6 @@ return (NULL);
 m = malloc(sizeof(int) * nmemb);
 if (m == 0)
 return (NULL);
-_memset(m, 0, sizeof(int) * nmemb);
+_memset(m, 0, nmemb * size);
 return (m);
 }
